@@ -1,0 +1,19 @@
+@model IEnumerable<MobilePhoneRegistrationMVC.Models.PhoneRegistration>
+
+<h2>Registered Phones</h2>
+<a href="/Home/Create">Register New Phone</a>
+<table border="1">
+<tr>
+<th>Owner</th><th>Brand</th><th>Model</th><th>IMEI</th><th>Insurance</th>
+</tr>
+@foreach (var item in Model)
+{
+<tr>
+<td>@item.OwnerName</td>
+<td>@item.Brand</td>
+<td>@item.Model</td>
+<td>@item.IMEI</td>
+<td>@item.InsuranceProvider</td>
+</tr>
+}
+</table>
